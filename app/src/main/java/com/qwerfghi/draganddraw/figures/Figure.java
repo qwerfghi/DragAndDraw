@@ -5,13 +5,15 @@ import android.graphics.PointF;
 
 public abstract class Figure {
     private int mColor;
+    private float mThickness;
     private PointF mOrigin;
     private PointF mCurrent;
 
-    public Figure(PointF origin, int color) {
+    public Figure(PointF origin, int color, float thickness) {
         mOrigin = origin;
         mCurrent = origin;
         mColor = color;
+        mThickness = thickness;
     }
 
     public PointF getCurrent() {
@@ -34,5 +36,9 @@ public abstract class Figure {
 
     public void setColor(int color) {
         mColor = color;
+    }
+
+    public float getThickness() {
+        return mThickness;
     }
 }
